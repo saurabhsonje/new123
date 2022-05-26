@@ -1,7 +1,6 @@
 #This is a sample Image 
 FROM ubuntu 
 MAINTAINER user@gmail.com 
-RUN add-apt-repository universe multiverse
 RUN apt-get update 
-RUN apt-get install –y nginx 
+RUN apt-get install nginx 
 CMD [“echo”,”Image created”] 
