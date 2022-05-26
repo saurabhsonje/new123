@@ -25,3 +25,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: build docker image 
         run: docker build -t myfirstechoimage:0.1 .
+      - name: check the images 
+        run:  docker images 
