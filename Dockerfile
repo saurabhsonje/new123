@@ -1,5 +1,4 @@
 From centos
 MAINTAINER saurabh.sonje
-Run yum update 
-Run yum install nginx
+Run yum install -y nginx
 cmd ["echo","nginx installed"] 
