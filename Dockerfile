@@ -1,4 +1,6 @@
-From centos
-MAINTAINER saurabh.sonje
-Run yum install -y nginx
-cmd ["echo","nginx installed"] 
+#This is a sample Image 
+FROM ubuntu 
+MAINTAINER user@gmail.com 
+RUN apt-get update 
+RUN apt-get install –y nginx 
+CMD [“echo”,”Image created”] 
