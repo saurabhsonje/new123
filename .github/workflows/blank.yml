@@ -27,3 +27,11 @@ jobs:
         run: docker build -t myfirstechoimage:0.1 .
       - name: check the images 
         run:  docker images 
+      - name: upload artifact 
+        env :
+           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        uses: actions/upload-artifact@v3.1.0
+        with: 
+               name: new
+               path: downloads
+
