@@ -32,6 +32,6 @@ jobs:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         uses: actions/upload-artifact@v3.1.0
         with: 
-               name: new
+               name: second
                path: downloads
 
