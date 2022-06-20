@@ -5,7 +5,7 @@ on:
 
 env:
   var1: Monday from flow
-
+  run: echo "$var1"
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
