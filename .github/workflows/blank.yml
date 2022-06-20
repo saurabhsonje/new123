@@ -1,36 +1,18 @@
-# This is a basic workflow to help you get started with Actions
+name: Greeting on variable day
 
-name: CI
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  workflow_dispatch
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+env:
+  var1: Monday from flow
+
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  greeting_job:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    env:
+      var1: monday from job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: build docker image 
-        run: docker build -t myfirstechoimage:0.1 .
-      - name: check the images 
-        run:  docker images 
-      - name: upload artifact 
-        env :
-           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        uses: actions/upload-artifact@v3.1.0
-        with: 
-               name: second
-               
+      - name: "Say Hello Mona it's Monday"
+        run: echo "$var1"
+        env:
+          var1: monday from step
