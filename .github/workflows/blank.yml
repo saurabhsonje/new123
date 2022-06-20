@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: "Say Hello Mona it's Monday"
         run: echo "$var1"
-        env:
-          var1: monday from step
+        #env:
+          #var1: monday from step
