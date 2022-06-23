@@ -5,7 +5,7 @@ on:
 
 env:
   var1: Monday from flow
-  run: echo hello $GITHUB_REF
+  run: echo hello ${GITHUB_REF}
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
@@ -13,6 +13,6 @@ jobs:
       #var1: monday from job
     steps:
       - name: "Say Hello Mona it's Monday"
-        run: echo hello $GITHUB_REF_Name
+        run: echo hello ${GITHUB_REF_Name}
         #env:
           #var1: monday from step
