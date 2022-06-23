@@ -9,10 +9,10 @@ env:
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
-    env:
-      var1: monday from job
+    #env:
+      #var1: monday from job
     steps:
       - name: "Say Hello Mona it's Monday"
-        run: echo $GITHUB_REF_NAME
+        run: echo $GITHUB_REF
         #env:
           #var1: monday from step
