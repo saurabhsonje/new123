@@ -13,6 +13,6 @@ jobs:
       #var1: monday from job
     steps:
       - name: "Say Hello Mona it's Monday"
-        run:  echo ${GITHUB_REF}
+        run:  echo ${GITHUB_REF_Name}
         #env:
           #var1: monday from step
